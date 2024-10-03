@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Viewing History</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Form to add new movie -->
+    <form id="movieForm">
+        <label for="title">Movie Title:</label>
+        <input type="text" id="title" name="title" required>
+        <button type="submit">Add Movie</button>
+    </form>
+
+    <!-- Header -->
+    <h1>Netflix Viewing History</h1>
+
+    <!-- Search bar for existing movies -->
+    <div id="search-container">
+        <input type="text" id="search-bar" placeholder="Search movies..." onkeyup="searchMovies()">
+    </div>
+
+    <!-- Movie list -->
+    <div id="movie-list"></div>
+
+    <!-- Pager controls -->
+    <div class="pager">
+        <button id="prevBtn" onclick="prevPage()">Previous</button>
+        <span id="pageInfo"></span>
+        <button id="nextBtn" onclick="nextPage()">Next</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
